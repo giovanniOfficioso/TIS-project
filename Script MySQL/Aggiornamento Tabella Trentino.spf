@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>ProjectWork</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>3939216517969477519</string>
+			<key>name</key>
+			<string>MySQL connection</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>10</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvEBILDBkaGxwdIyQlLDM3Oz5BREhVJG51bGzTDQ4PEBQY
+			V05TLmtleXNaTlMub2JqZWN0c1YkY2xhc3OjERITgAKAA4AEoxUW
+			F4AFgAaACoARVHR5cGVUcm93c1RrZXlzXxAmU2VsZWN0aW9uRGV0
+			YWlsVHlwZVByaW1hcnlLZXllZERldGFpbHPTDQ4PHiAioR+AB6Eh
+			gAiACW8QHgAyADAAMgAwAC0AMAA0AC0AMwAwACAAMQA3ADoAMAAw
+			ADoAMAAw//gAVgBlAG4AZQB0AG//+AA1//gAMAnSJicoKVokY2xh
+			c3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxlRGljdGlvbmFyeaMo
+			KitcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00g4PLTKkLi8wMYALgA2A
+			DoAPgBDSDzQ1NllOUy5zdHJpbmeADFRkYXRh0iYnODlfEA9OU011
+			dGFibGVTdHJpbmejODorWE5TU3RyaW5n0g80NT2ADFdyZWdpb25l
+			0g80NUCADFdjb2RfcmVn0g80NUOADFhjb2RfcHJvdtImJ0VGXk5T
+			TXV0YWJsZUFycmF5o0VHK1dOU0FycmF50iYnKkmiKisACAARABoA
+			JAApADIANwBJAEwAUQBTAGgAbgB1AH0AiACPAJMAlQCXAJkAnQCf
+			AKEAowClAKoArwC0AN0A5ADmAOgA6gDsAO4BLQEuATMBPgFHAV0B
+			YQFuAXcBfAGBAYMBhQGHAYkBiwGQAZoBnAGhAaYBuAG8AcUBygHM
+			AdQB2QHbAeMB6AHqAfMB+AIHAgsCEwIYAAAAAAAAAgEAAAAAAAAA
+			SgAAAAAAAAAAAAAAAAAAAhs=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{2102, 17146}, {1310, 648}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+INSERT INTO `Trentino`(`data`, `ricov_sintomi`, `terapia_intensiva`, `totale_ospedal`, `isolamento_domiciliare`, `totale_pos`, `delta_tot_pos`, `nuovi_pos`, `dimessi_guariti`, `deceduti`, `totale_casi_regionali`, `tamponi`, `casi_testati`)
+  (SELECT m.`data`,
+          SUM(m.`ricov_sintomi`),
+          SUM(m.`terapia_intensiva`),
+          SUM(m.`totale_ospedal`),
+          SUM(m.`isolamento_domiciliare`),
+          SUM(m.`totale_pos`),
+          SUM(m.`delta_tot_pos`),
+          SUM(`nuovi_pos`),
+          SUM(`dimessi_guariti`),
+          SUM(m.`deceduti`),
+          SUM(m.`totale_casi_regionali`),
+          SUM(m.`tamponi`),
+          SUM(m.`casi_testati`)
+   FROM `master` m
+   WHERE m.`cod_prov`= 0
+     AND m.`cod_reg`= 4
+   GROUP BY m.`data`);
+
+UPDATE
+	`Trentino` t
+SET
+	t.`cod_prov`= 0,
+	t.`cod_reg`= 4,
+	t.`stato`='ITA';
+	
+
+SELECT m.`data`,
+       SUM(m.`ricov_sintomi`),
+       SUM(m.`terapia_intensiva`),
+       SUM(m.`isolamento_domiciliare`),
+       SUM(m.`totale_pos`),
+       SUM(m.`delta_tot_pos`),
+       SUM(`nuovi_pos`),
+       SUM(`dimessi_guariti`),
+       SUM(m.`deceduti`),
+       SUM(m.`totale_casi_regionali`),
+       SUM(m.`tamponi`),
+       SUM(m.`casi_testati`)
+FROM `master` m
+WHERE m.`cod_prov`= 0
+  AND m.`cod_reg`= 4
+GROUP BY m.`data`;
+
+UPDATE `Trentino` t
+SET
+	t.`età_media`= (SELECT DISTINCT m.`età_media` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`case_riposo`= (SELECT DISTINCT m.`case_riposo` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`km_autostrada`= (SELECT DISTINCT m.`km_autostrada` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`flusso_veicoli`= (SELECT DISTINCT m.`flusso_veicoli` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`cura`= (SELECT DISTINCT m.`cura` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`data_cura`= (SELECT DISTINCT m.`data_cura` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`posti_intensiva_reg`= (SELECT DISTINCT m.`posti_intensiva_reg` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`densità_abitanti_reg`= (SELECT DISTINCT m.`densità_abitanti_reg` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`variazione_acquisti_attrezzi`= (SELECT m.`variazione_acquisti_attrezzi` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`variazione_acquisti_libri`= (SELECT m.`variazione_acquisti_libri` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`variazione_uso_netflix`= (SELECT m.`variazione_uso_netflix` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`variazione_uso_amazon`= (SELECT m.`variazione_uso_amazon` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`variazione_richiesta_fibra_tim`= (SELECT m.`variazione_richiesta_fibra_tim` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%'),
+	t.`variazione_richiesta_fibra_wind3`= (SELECT m.`variazione_richiesta_fibra_wind3` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-05-03%');
+	
+Update `Trentino` t
+SET
+	t.`variazione_acquisti_attrezzi`= NULL,
+	t.`variazione_acquisti_libri`= NULL, 
+	t.`variazione_uso_netflix`= NULL,
+	t.`variazione_uso_amazon`= NULL, 
+	t.`variazione_richiesta_fibra_tim`= NULL, 
+	t.`variazione_richiesta_fibra_wind3`= NULL
+WHERE
+	t.`data` &lt;&gt; '2020-05-03 17:00:00';
+	
+UPDATE `Trentino` t
+SET
+	t.`flusso_veicoli`= (SELECT DISTINCT m.`flusso_veicoli` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-02-29%')
+WHERE
+	t.`data` LIKE '2020-02-29%';
+	
+UPDATE `Trentino` t
+SET
+	t.`flusso_veicoli`= (SELECT DISTINCT m.`flusso_veicoli` FROM `master` m WHERE m.`cod_prov`= 0 and m.`cod_reg`=4 and m.`regione`= 'P.A. Trento' and m.`data` like '2020-03-31%')
+WHERE
+	t.`data` LIKE '2020-03-31%';</string>
+			<key>table</key>
+			<string>master</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>333</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.20</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

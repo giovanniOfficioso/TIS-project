@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>ProjectWork</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>3939216517969477519</string>
+			<key>name</key>
+			<string>MySQL connection</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGuCwwZGhscHSEoLTE1ODxVJG51bGzTDQ4PEBQYV05TLmtl
+			eXNaTlMub2JqZWN0c1YkY2xhc3OjERITgAKAA4AEoxUWF4AFgAaA
+			CIANVHR5cGVUcm93c1RrZXlzXxAmU2VsZWN0aW9uRGV0YWlsVHlw
+			ZVByaW1hcnlLZXllZERldGFpbHPTDQ4PHh8goKCAB9IiIyQlWiRj
+			bGFzc25hbWVYJGNsYXNzZXNfEBNOU011dGFibGVEaWN0aW9uYXJ5
+			oyQmJ1xOU0RpY3Rpb25hcnlYTlNPYmplY3TSDg8pLKIqK4AJgAuA
+			DNIPLi8wWU5TLnN0cmluZ4AKVGRhdGHSIiMyM18QD05TTXV0YWJs
+			ZVN0cmluZ6MyNCdYTlNTdHJpbmfSDy4vN4AKWGNvZF9wcm920iIj
+			OTpeTlNNdXRhYmxlQXJyYXmjOTsnV05TQXJyYXnSIiMmPaImJwAI
+			ABEAGgAkACkAMgA3AEkATABRAFMAYgBoAG8AdwCCAIkAjQCPAJEA
+			kwCXAJkAmwCdAJ8ApACpAK4A1wDeAN8A4ADiAOcA8gD7AREBFQEi
+			ASsBMAEzATUBNwE5AT4BSAFKAU8BVAFmAWoBcwF4AXoBgwGIAZcB
+			mwGjAagAAAAAAAACAQAAAAAAAAA+AAAAAAAAAAAAAAAAAAABqw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 15203}, {1231, 642}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT
+	v.`data`,
+	v.`cod_reg`,
+	v.`regione`,
+	r.`km_autostrada`,
+	v.`traffico`,
+	( v.`traffico` / r.`km_autostrada` ) AS "Saturazione autostrada" 
+FROM
+	`veicoli` v,
+	`regioni` r 
+WHERE
+	r.`cod_reg` = v.`cod_reg` 
+	AND v.`data` LIKE "2020-02-29%" 
+GROUP BY
+	v.`cod_reg` 
+ORDER BY
+	v.`traffico` DESC;
+</string>
+			<key>table</key>
+			<string>dataprov</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>309</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.20</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

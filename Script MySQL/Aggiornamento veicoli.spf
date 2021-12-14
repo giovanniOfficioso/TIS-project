@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>Università</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-4987463895967531390</string>
+			<key>name</key>
+			<string>MySQL</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvEBALDBkaGxwdISgvMzc6PUBEVSRudWxs0w0ODxAUGFdO
+			Uy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzoxESE4ACgAOABKMVFheA
+			BYAGgAiAD1R0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlvbkRldGFp
+			bFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0w0ODx4fIKCggAfSIiMk
+			JVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxlRGljdGlv
+			bmFyeaMkJidcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00g4PKS6kKiss
+			LYAJgAuADIANgA7SDzAxMllOUy5zdHJpbmeAClRkYXRh0iIjNDVf
+			EA9OU011dGFibGVTdHJpbmejNDYnWE5TU3RyaW5n0g8wMTmACldy
+			ZWdpb25l0g8wMTyACldjb2RfcmVn0g8wMT+AClhjb2RfcHJvdtIi
+			I0FCXk5TTXV0YWJsZUFycmF5o0FDJ1dOU0FycmF50iIjJkWiJicA
+			CAARABoAJAApADIANwBJAEwAUQBTAGYAbABzAHsAhgCNAJEAkwCV
+			AJcAmwCdAJ8AoQCjAKgArQCyANsA4gDjAOQA5gDrAPYA/wEVARkB
+			JgEvATQBOQE7AT0BPwFBAUMBSAFSAVQBWQFeAXABdAF9AYIBhAGM
+			AZEBkwGbAaABogGrAbABvwHDAcsB0AAAAAAAAAIBAAAAAAAAAEYA
+			AAAAAAAAAAAAAAAAAAHT
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 1016}, {1220, 752}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+#mese marzo
+ UPDATE
+	`master` m
+SET
+	flusso_veicoli = 3226
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Abruzzo';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =2513
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Basilicata';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =3510
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Calabria';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =4320
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Campania';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =7125
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Emilia%';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =5830
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Friuli%';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =26132
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Lazio';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =2854
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Liguria';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =10102
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Lombardia';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =7956
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Marche';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =2175
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Molise';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =2560
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Piemonte';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =7153
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Puglia';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =3230
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Sardegna';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =2745
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Sicilia';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =4106
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Toscana';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =0
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'P.A. Trento';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =6953
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Umbria';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =680
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Valle d%'; 
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =4220
+WHERE
+	m.`data` LIKE '2020-03-31%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Veneto';
+
+
+#mese febbraio
+ UPDATE
+	`master` m
+SET
+	flusso_veicoli = 6920
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Abruzzo';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =5620
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Basilicata';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =7196
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Calabria';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =9356
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Campania';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =16368
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Emilia%';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =11345
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Friuli%';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =56902
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Lazio';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =7420
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Liguria';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli = 26053
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Lombardia';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =16957
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Marche';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =4579
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Molise';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =5742
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Piemonte';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =14106
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Puglia';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =7120
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Sardegna';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =5689
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Sicilia';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =8512
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Toscana';
+	
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =0
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'P.A. Trento';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =15766
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Umbria';
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =1620
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Valle d%'; 
+
+UPDATE
+	`master` m
+SET
+	flusso_veicoli =8968
+WHERE
+	m.`data` LIKE '2020-02-29%'
+	AND m.cod_prov = 0
+	AND m.regione= 'Veneto';
+
+</string>
+			<key>table</key>
+			<string>Master</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>313</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.20</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

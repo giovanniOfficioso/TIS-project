@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>ProjectWork</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>3939216517969477519</string>
+			<key>name</key>
+			<string>MySQL connection</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>6</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvEBILDBkaGxwdIyQlLDM3Oz5BREhVJG51bGzTDQ4PEBQY
+			V05TLmtleXNaTlMub2JqZWN0c1YkY2xhc3OjERITgAKAA4AEoxUW
+			F4AFgAaACoARVHR5cGVUcm93c1RrZXlzXxAmU2VsZWN0aW9uRGV0
+			YWlsVHlwZVByaW1hcnlLZXllZERldGFpbHPTDQ4PHiAioR+AB6Eh
+			gAiACW8QHwAyADAAMgAwAC0AMAAzAC0AMwAxACAAMQA3ADoAMAAw
+			ADoAMAAw//gAVgBlAG4AZQB0AG//+AA1//gAMgAzCdImJygpWiRj
+			bGFzc25hbWVYJGNsYXNzZXNfEBNOU011dGFibGVEaWN0aW9uYXJ5
+			oygqK1xOU0RpY3Rpb25hcnlYTlNPYmplY3TSDg8tMqQuLzAxgAuA
+			DYAOgA+AENIPNDU2WU5TLnN0cmluZ4AMVGRhdGHSJic4OV8QD05T
+			TXV0YWJsZVN0cmluZ6M4OitYTlNTdHJpbmfSDzQ1PYAMV3JlZ2lv
+			bmXSDzQ1QIAMV2NvZF9yZWfSDzQ1Q4AMWGNvZF9wcm920iYnRUZe
+			TlNNdXRhYmxlQXJyYXmjRUcrV05TQXJyYXnSJicqSaIqKwAIABEA
+			GgAkACkAMgA3AEkATABRAFMAaABuAHUAfQCIAI8AkwCVAJcAmQCd
+			AJ8AoQCjAKUAqgCvALQA3QDkAOYA6ADqAOwA7gEvATABNQFAAUkB
+			XwFjAXABeQF+AYMBhQGHAYkBiwGNAZIBnAGeAaMBqAG6Ab4BxwHM
+			Ac4B1gHbAd0B5QHqAewB9QH6AgkCDQIVAhoAAAAAAAACAQAAAAAA
+			AABKAAAAAAAAAAAAAAAAAAACHQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{3039, 8731}, {734, 516}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+#febbraio#
+update
+	`master`
+set
+	aeroporto = 'Alghero',
+	passeggeri_internazionali = 9997,
+	passeggeri_nazionali = 60994
+where
+	`master`.`data` like '2020-02-29%'
+	and `master`.cod_prov = 90;
+
+update
+	`master`
+set
+	aeroporto = 'Ancona',
+	passeggeri_internazionali = 19192,
+	passeggeri_nazionali = 3677
+where
+	`master`.cod_prov = 42
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Bari',
+	passeggeri_internazionali = 120511,
+	passeggeri_nazionali = 202675
+where
+	`master`.cod_prov = 72
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Bergamo',
+	passeggeri_internazionali = 698201,
+	passeggeri_nazionali = 208465
+where
+	`master`.cod_prov = 16
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Bologna',
+	passeggeri_internazionali = 468151,
+	passeggeri_nazionali = 122076
+where
+	`master`.cod_prov = 37
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Bolzano',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 21
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Brescia',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 108
+where
+	`master`.cod_prov = 17
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Brindisi',
+	passeggeri_internazionali = 27985,
+	passeggeri_nazionali = 121122
+where
+	`master`.cod_prov = 74
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Cagliari',
+	passeggeri_internazionali = 36029,
+	passeggeri_nazionali = 192631
+where
+	`master`.cod_prov = 92
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Catania',
+	passeggeri_internazionali = 155001,
+	passeggeri_nazionali = 391836
+where
+	`master`.cod_prov = 87
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Crotone',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 8195
+where
+	`master`.cod_prov = 101
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Cuneo',
+	passeggeri_internazionali = 1686,
+	passeggeri_nazionali = 8316
+where
+	`master`.cod_prov = 4
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Firenze',
+	passeggeri_internazionali = 144370,
+	passeggeri_nazionali = 23407
+where
+	`master`.cod_prov = 48
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Foggia',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 71
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Genova',
+	passeggeri_internazionali = 22386,
+	passeggeri_nazionali = 44860
+where
+	`master`.cod_prov = 10
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Grosseto',
+	passeggeri_internazionali = 34,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 53
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Lamezia Terme',
+	#provincia catanzaro#
+ passeggeri_internazionali = 8212,
+	passeggeri_nazionali = 136771
+where
+	`master`.cod_prov = 79
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Milano Linate/Malpensa',
+	passeggeri_internazionali = 1630760,
+	passeggeri_nazionali = 564293
+where
+	`master`.cod_prov = 15
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Napoli',
+	passeggeri_internazionali = 360027,
+	passeggeri_nazionali = 242706
+where
+	`master`.cod_prov = 63
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Palermo',
+	passeggeri_internazionali = 75100,
+	passeggeri_nazionali = 297727
+where
+	`master`.cod_prov = 82
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Perugia',
+	passeggeri_internazionali = 8793,
+	passeggeri_nazionali = 5279
+where
+	`master`.cod_prov = 54
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Pescara',
+	passeggeri_internazionali = 17553,
+	passeggeri_nazionali = 18212
+where
+	`master`.cod_prov = 68
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Pisa',
+	passeggeri_internazionali = 166507,
+	passeggeri_nazionali = 98798
+where
+	`master`.cod_prov = 50
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Reggio Calabria',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 15761
+where
+	`master`.cod_prov = 80
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Rimini',
+	passeggeri_internazionali = 10035,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 99
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Roma Ciampino/Fiumicino',
+	passeggeri_internazionali = 666005,
+	passeggeri_nazionali = 2169362
+where
+	`master`.cod_prov = 58
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Torino',
+	passeggeri_internazionali = 186016,
+	passeggeri_nazionali = 127075
+where
+	`master`.cod_prov = 1
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Trapani',
+	passeggeri_internazionali = 6,
+	passeggeri_nazionali = 20190
+where
+	`master`.cod_prov = 81
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Treviso',
+	passeggeri_internazionali = 126640,
+	passeggeri_nazionali = 81767
+where
+	`master`.cod_prov = 26
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Trieste',
+	passeggeri_internazionali = 17102,
+	passeggeri_nazionali = 27979
+where
+	`master`.cod_prov = 32
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Venezia',
+	passeggeri_internazionali = 529351,
+	passeggeri_nazionali = 81660
+where
+	`master`.cod_prov = 27
+	and `master`.`data` like '2020-02-29%';
+
+update
+	`master`
+set
+	aeroporto = 'Verona',
+	passeggeri_internazionali = 127475,
+	passeggeri_nazionali = 60205
+where
+	`master`.cod_prov = 23
+	and `master`.`data` like '2020-02-29%';
+
+#marzo#
+
+update
+	`master`
+set
+	aeroporto = 'Alghero',
+	passeggeri_internazionali = 1854,
+	passeggeri_nazionali = 13397
+where
+	`master`.`data` like '2020-03-31%'
+	and `master`.cod_prov = 90;
+
+update
+	`master`
+set
+	aeroporto = 'Ancona',
+	passeggeri_internazionali = 3741,
+	passeggeri_nazionali = 762
+where
+	`master`.cod_prov = 42
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Bari',
+	passeggeri_internazionali = 25455,
+	passeggeri_nazionali = 33430
+where
+	`master`.cod_prov = 72
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Bergamo',
+	passeggeri_internazionali = 77869,
+	passeggeri_nazionali = 22194
+where
+	`master`.cod_prov = 16
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Bologna',
+	passeggeri_internazionali = 75025,
+	passeggeri_nazionali = 24577
+where
+	`master`.cod_prov = 37
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Bolzano',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 21
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Brescia',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 17
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Brindisi',
+	passeggeri_internazionali = 6390,
+	passeggeri_nazionali = 17815
+where
+	`master`.cod_prov = 74
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Cagliari',
+	passeggeri_internazionali = 9712,
+	passeggeri_nazionali = 44428
+where
+	`master`.cod_prov = 92
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Catania',
+	passeggeri_internazionali = 40123,
+	passeggeri_nazionali = 78405
+where
+	`master`.cod_prov = 87
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Crotone',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 1302
+where
+	`master`.cod_prov = 101
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Cuneo',
+	passeggeri_internazionali = 327,
+	passeggeri_nazionali = 1846
+where
+	`master`.cod_prov = 4
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Firenze',
+	passeggeri_internazionali = 27358,
+	passeggeri_nazionali = 5377
+where
+	`master`.cod_prov = 48
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Foggia',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 71
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Genova',
+	passeggeri_internazionali = 5274,
+	passeggeri_nazionali = 10824
+where
+	`master`.cod_prov = 10
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Grosseto',
+	passeggeri_internazionali = 18,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 53
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Lamezia Terme',
+	#provincia catanzaro#
+ passeggeri_internazionali = 2487,
+	passeggeri_nazionali = 22157
+where
+	`master`.cod_prov = 79
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Milano Linate/Malpensa',
+	passeggeri_internazionali = 220494,
+	passeggeri_nazionali = 77463
+where
+	`master`.cod_prov = 15
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Napoli',
+	passeggeri_internazionali = 86209,
+	passeggeri_nazionali = 40604
+where
+	`master`.cod_prov = 63
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Palermo',
+	passeggeri_internazionali = 18151,
+	passeggeri_nazionali = 65392
+where
+	`master`.cod_prov = 82
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Perugia',
+	passeggeri_internazionali = 2091,
+	passeggeri_nazionali = 946
+where
+	`master`.cod_prov = 54
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Pescara',
+	passeggeri_internazionali = 3775,
+	passeggeri_nazionali = 1758
+where
+	`master`.cod_prov = 68
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Pisa',
+	passeggeri_internazionali = 33811,
+	passeggeri_nazionali = 24035
+where
+	`master`.cod_prov = 50
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Reggio Calabria',
+	passeggeri_internazionali = 0,
+	passeggeri_nazionali = 3009
+where
+	`master`.cod_prov = 80
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Rimini',
+	passeggeri_internazionali = 722,
+	passeggeri_nazionali = 0
+where
+	`master`.cod_prov = 99
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Roma Ciampino/Fiumicino',
+	passeggeri_internazionali = 537115,
+	passeggeri_nazionali = 174690
+where
+	`master`.cod_prov = 58
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Torino',
+	passeggeri_internazionali = 36887,
+	passeggeri_nazionali = 29243
+where
+	`master`.cod_prov = 1
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Trapani',
+	passeggeri_internazionali = 12,
+	passeggeri_nazionali = 4364
+where
+	`master`.cod_prov = 81
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Treviso',
+	passeggeri_internazionali = 13946,
+	passeggeri_nazionali = 12953
+where
+	`master`.cod_prov = 26
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Trieste',
+	passeggeri_internazionali = 3725,
+	passeggeri_nazionali = 5377
+where
+	`master`.cod_prov = 32
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Venezia',
+	passeggeri_internazionali = 64193,
+	passeggeri_nazionali = 15067
+where
+	`master`.cod_prov = 27
+	and `master`.`data` like '2020-03-31%';
+
+update
+	`master`
+set
+	aeroporto = 'Verona',
+	passeggeri_internazionali = 21169,
+	passeggeri_nazionali = 13108
+where
+	`master`.cod_prov = 23
+	and `master`.`data` like '2020-03-31%';
+</string>
+			<key>table</key>
+			<string>master</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.20</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

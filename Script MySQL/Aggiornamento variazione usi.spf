@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>Università</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-4987463895967531390</string>
+			<key>name</key>
+			<string>MySQL</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvEBALDBkaGxwdISgvMzc6PUBEVSRudWxs0w0ODxAUGFdO
+			Uy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzoxESE4ACgAOABKMVFheA
+			BYAGgAiAD1R0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlvbkRldGFp
+			bFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0w0ODx4fIKCggAfSIiMk
+			JVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxlRGljdGlv
+			bmFyeaMkJidcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00g4PKS6kKiss
+			LYAJgAuADIANgA7SDzAxMllOUy5zdHJpbmeAClRkYXRh0iIjNDVf
+			EA9OU011dGFibGVTdHJpbmejNDYnWE5TU3RyaW5n0g8wMTmACldy
+			ZWdpb25l0g8wMTyACldjb2RfcmVn0g8wMT+AClhjb2RfcHJvdtIi
+			I0FCXk5TTXV0YWJsZUFycmF5o0FDJ1dOU0FycmF50iIjJkWiJicA
+			CAARABoAJAApADIANwBJAEwAUQBTAGYAbABzAHsAhgCNAJEAkwCV
+			AJcAmwCdAJ8AoQCjAKgArQCyANsA4gDjAOQA5gDrAPYA/wEVARkB
+			JgEvATQBOQE7AT0BPwFBAUMBSAFSAVQBWQFeAXABdAF9AYIBhAGM
+			AZEBkwGbAaABogGrAbABvwHDAcsB0AAAAAAAAAIBAAAAAAAAAEYA
+			AAAAAAAAAAAAAAAAAAHT
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 1016}, {1220, 752}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+#aggiornamento variazione usi
+ UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.56,
+	variazione_acquisti_libri = 0.12,
+	variazione_uso_netflix = 0.38,
+	variazione_uso_amazon = 0.14,
+	variazione_richiesta_fibra_tim = 0.14,
+	variazione_richiesta_fibra_wind3 = 0.08
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Abruzzo';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.70,
+	variazione_acquisti_libri = 0.12,
+	variazione_uso_netflix = 0.36,
+	variazione_uso_amazon = 0.08,
+	variazione_richiesta_fibra_tim = -0.10,
+	variazione_richiesta_fibra_wind3 = 0.16
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Basilicata';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.60,
+	variazione_acquisti_libri = 0.10,
+	variazione_uso_netflix = 0.40,
+	variazione_uso_amazon = 0.10,
+	variazione_richiesta_fibra_tim = 0.16,
+	variazione_richiesta_fibra_wind3 = 0.12
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Calabria';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.46,
+	variazione_acquisti_libri = 0.12,
+	variazione_uso_netflix = 0.44,
+	variazione_uso_amazon = 0.14,
+	variazione_richiesta_fibra_tim = 0.13,
+	variazione_richiesta_fibra_wind3 = 0.02
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Campania';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.40,
+	variazione_acquisti_libri = 0.08,
+	variazione_uso_netflix = 0.30,
+	variazione_uso_amazon = 0.16,
+	variazione_richiesta_fibra_tim = 0.20,
+	variazione_richiesta_fibra_wind3 = 0.12
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Emilia%';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.46,
+	variazione_acquisti_libri = 0.06,
+	variazione_uso_netflix = 0.24,
+	variazione_uso_amazon = 0.18,
+	variazione_richiesta_fibra_tim = 0.06,
+	variazione_richiesta_fibra_wind3 = 0.06
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Friuli%';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.58,
+	variazione_acquisti_libri = 0.10,
+	variazione_uso_netflix = 0.30,
+	variazione_uso_amazon = 0.16,
+	variazione_richiesta_fibra_tim = 0.12,
+	variazione_richiesta_fibra_wind3 = 0.08
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Lazio';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.54,
+	variazione_acquisti_libri = 0.08,
+	variazione_uso_netflix = 0.28,
+	variazione_uso_amazon = 0.14,
+	variazione_richiesta_fibra_tim = 0.12,
+	variazione_richiesta_fibra_wind3 = 0.12
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Liguria';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.48,
+	variazione_acquisti_libri = 0.08,
+	variazione_uso_netflix = 0.30,
+	variazione_uso_amazon = 0.18,
+	variazione_richiesta_fibra_tim = 0.14,
+	variazione_richiesta_fibra_wind3 = 0.12
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Lombardia';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.60,
+	variazione_acquisti_libri = 0.10,
+	variazione_uso_netflix = 0.36,
+	variazione_uso_amazon = 0.14,
+	variazione_richiesta_fibra_tim = 0.22,
+	variazione_richiesta_fibra_wind3 = 0.06
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Marche';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.50,
+	variazione_acquisti_libri = 0.12,
+	variazione_uso_netflix = 0.38,
+	variazione_uso_amazon = 0.10,
+	variazione_richiesta_fibra_tim = 0.02,
+	variazione_richiesta_fibra_wind3 =-0.02
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Molise';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.46,
+	variazione_acquisti_libri = 0.06,
+	variazione_uso_netflix = 0.30,
+	variazione_uso_amazon = 0.14,
+	variazione_richiesta_fibra_tim = 0.10,
+	variazione_richiesta_fibra_wind3 = 0.02
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Piemonte';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.52,
+	variazione_acquisti_libri = 0.14,
+	variazione_uso_netflix = 0.42,
+	variazione_uso_amazon = 0.10,
+	variazione_richiesta_fibra_tim = 0.04,
+	variazione_richiesta_fibra_wind3 = 0.06
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Puglia';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.56,
+	variazione_acquisti_libri = 0.06,
+	variazione_uso_netflix = 0.34,
+	variazione_uso_amazon = 0.10,
+	variazione_richiesta_fibra_tim = 0.08,
+	variazione_richiesta_fibra_wind3 = 0.08
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Sardegna';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.54,
+	variazione_acquisti_libri = 0.12,
+	variazione_uso_netflix = 0.38,
+	variazione_uso_amazon = 0.10,
+	variazione_richiesta_fibra_tim = 0.20,
+	variazione_richiesta_fibra_wind3 = 0.08
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Sicilia';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.58,
+	variazione_acquisti_libri = 0.10,
+	variazione_uso_netflix = 0.32,
+	variazione_uso_amazon = 0.16,
+	variazione_richiesta_fibra_tim = 0.16,
+	variazione_richiesta_fibra_wind3 = 0.08
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Toscana';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.56,
+	variazione_acquisti_libri = 0.10,
+	variazione_uso_netflix = 0.24,
+	variazione_uso_amazon = 0.16,
+	variazione_richiesta_fibra_tim = 0.48,
+	variazione_richiesta_fibra_wind3 = 0.12
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'P.A. Trento';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.52,
+	variazione_acquisti_libri = 0.08,
+	variazione_uso_netflix = 0.32,
+	variazione_uso_amazon = 0.12,
+	variazione_richiesta_fibra_tim = 0.04,
+	variazione_richiesta_fibra_wind3 = 0.12
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Umbria';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.32,
+	variazione_acquisti_libri = 0.06,
+	variazione_uso_netflix = 0.30,
+	variazione_uso_amazon = 0.16,
+	variazione_richiesta_fibra_tim = -0.26,
+	variazione_richiesta_fibra_wind3 = 0.10
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione LIKE 'Valle d%';
+
+UPDATE
+	`master` m
+SET
+	variazione_acquisti_attrezzi = 0.52,
+	variazione_acquisti_libri = 0.08,
+	variazione_uso_netflix = 0.26,
+	variazione_uso_amazon = 0.16,
+	variazione_richiesta_fibra_tim = 0.16,
+	variazione_richiesta_fibra_wind3 = 0.08
+WHERE
+	m.`data` LIKE '2020-05-03%'
+	AND m.cod_prov = 0
+	AND m.regione = 'Veneto';
+</string>
+			<key>table</key>
+			<string>Master</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>313</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.20</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

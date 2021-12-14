@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>ProjectWork</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>3939216517969477519</string>
+			<key>name</key>
+			<string>MySQL connection</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGvEBALDBkaGxwdISgvMzc6PUBEVSRudWxs0w0ODxAUGFdO
+			Uy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzoxESE4ACgAOABKMVFheA
+			BYAGgAiAD1R0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlvbkRldGFp
+			bFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0w0ODx4fIKCggAfSIiMk
+			JVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxlRGljdGlv
+			bmFyeaMkJidcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00g4PKS6kKiss
+			LYAJgAuADIANgA7SDzAxMllOUy5zdHJpbmeAClRkYXRh0iIjNDVf
+			EA9OU011dGFibGVTdHJpbmejNDYnWE5TU3RyaW5n0g8wMTmACldy
+			ZWdpb25l0g8wMTyACldjb2RfcmVn0g8wMT+AClhjb2RfcHJvdtIi
+			I0FCXk5TTXV0YWJsZUFycmF5o0FDJ1dOU0FycmF50iIjJkWiJicA
+			CAARABoAJAApADIANwBJAEwAUQBTAGYAbABzAHsAhgCNAJEAkwCV
+			AJcAmwCdAJ8AoQCjAKgArQCyANsA4gDjAOQA5gDrAPYA/wEVARkB
+			JgEvATQBOQE7AT0BPwFBAUMBSAFSAVQBWQFeAXABdAF9AYIBhAGM
+			AZEBkwGbAaABogGrAbABvwHDAcsB0AAAAAAAAAIBAAAAAAAAAEYA
+			AAAAAAAAAAAAAAAAAAHT
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1348, 663}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>CREATE TABLE usi 
+(
+`data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+regione VARCHAR (35),
+cod_reg SMALLINT,
+variazione_acquisti_attrezzi DECIMAL (3, 2),
+variazione_acquisti_libri DECIMAL (3, 2),
+variazione_uso_netflix DECIMAL (3, 2),
+variazione_uso_amazon DECIMAL (3, 2),
+variazione_richiesta_fibra_tim DECIMAL (3, 2),
+variazione_richiesta_fibra_wind3 DECIMAL (3, 2),
+PRIMARY KEY (`data`, cod_reg),
+FOREIGN KEY (regione, cod_reg) REFERENCES regioni(regione, cod_reg)
+);
+
+
+INSERT INTO usi
+  (SELECT m.`data`, m.`regione`, m.`cod_reg`, m.`variazione_acquisti_attrezzi`, m.`variazione_acquisti_libri`, m.`variazione_uso_netflix`, m.`variazione_uso_amazon`, m.`variazione_richiesta_fibra_tim`, m.`variazione_richiesta_fibra_wind3`
+   FROM `master` m
+   WHERE m.`variazione_acquisti_attrezzi`&lt;&gt; 0 );</string>
+			<key>table</key>
+			<string>master</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>339</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.20</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
